@@ -17,7 +17,7 @@ function App() {
     setLoading(true);
     axios({
       method: "GET",
-      url: `https://shot.screenshotapi.net/screenshot?token=${env.SCREEN_SHOT_API}=${websiteUrl}`,
+      url: `https://shot.screenshotapi.net/screenshot?token=${env.SCREEN_SHOT_API}&url=${websiteUrl}`,
     })
       .then((res) => {
         setImage(res.data.screenshot);
